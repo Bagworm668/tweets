@@ -1,0 +1,195 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente predeterminada y de respaldo */
+    background-color: #a811d63b; /* Color de fondo */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    
+}
+
+/* Estilos para el contenedor principal */
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Margen superior e inferior de 20px y centrado horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background-color: #670c833b; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    
+}
+
+
+/* Estilos para el encabezado */
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 20px;
+    }
+  }
+  
+  #tweet {
+    width: calc(100% - 40px);
+    height: 160px;
+    border: 1px solid #1c067a;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    resize: none;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #1c067a;
+  
+    /* Placeholder */
+    &::placeholder {
+      color: #ccc;
+    }
+  
+    /* Focus */
+    &:focus {
+      border-color: #1c067a;
+    }
+  
+    /* Responsive design */
+    @media (max-width: 768px) {
+      width: calc(100% - 20px);
+    }
+  }
+  
+
+/* Estilos para el botón de agregar */
+.button {
+    background-color: #0daedf;
+    color: #fff;
+    border: 1px solid #1c067a;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+  
+    /* Shadow */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  
+    /* Icon */
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      background-image: url("https://www.flaticon.es/iconos-gratis/imagen");
+      background-size: contain;
+    }
+  
+    /* Hover */
+    &:hover {
+      background-color: #1fca0a;
+    }
+  
+    /* Responsive design */
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  
+
+
+
+  #lista-tweets {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    /* Grid layout */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+  
+    /* Responsive design */
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  /* Estilos para cada tweet */
+  .tweet {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    /* Avatar */
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      margin-right: 10px;
+      background-image: url("https://www.flaticon.es/iconos-gratis/imagen");
+      background-size: contain;
+      border-radius: 50%;
+    }
+  }
+  
+
+  .borrar-tweet {
+    color: #6c757d;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    margin-left: 5px;
+    transition: color 0.3s, text-shadow 0.3s;
+    text-decoration: none;
+  
+    /* Icon */
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      background-image: url("https://www.flaticon.es/iconos-gratis/imagen");
+      background-size: contain;
+    }
+  
+    /* Hover */
+    &:hover {
+      color: #990000;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+  
+    /* Responsive design */
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+
+  .required-field:required {
+    border: 1px solid #f08080; /* Light red border */
+    outline: none;
+  
+    /* Add an asterisk icon next to the field (replace URL with your desired icon source) */
+    &::after {
+      content: "*";
+      color: #f08080;
+      margin-left: 5px;
+    }
+  }
+  
